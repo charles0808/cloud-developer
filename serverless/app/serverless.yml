@@ -179,7 +179,7 @@ resources:
         Principal: s3.amazonaws.com
         Action: lambda:InvokeFunction
         SourceAccount: !Ref AWS::AccountId
-        sourceArn: arn:aws:s3:::${self:provider.environment.IMAGES_S3_BUCKET}
+        SourceArn: arn:aws:s3:::${self:provider.environment.IMAGES_S3_BUCKET}
       
     BucketPolicy:
       Type: AWS::S3::BucketPolicy
